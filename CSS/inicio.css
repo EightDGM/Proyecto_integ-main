@@ -1,0 +1,255 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: 'VarelaRound';
+    src: url(../Fuente/VarelaRound-Regular.ttf);
+}
+
+html {
+    font-family: 'VarelaRound';
+    width: 100%;
+    height: 100%;
+    background-color: rgba(218, 136, 218, 0.959);
+}
+
+/* header */
+body {
+    font-family: 'VarelaRound';
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: aliceblue;
+}
+
+header {
+    display: flex;
+    min-height: 70px;
+    background-color: rgb(255, 127, 80);
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px; 
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s ease; 
+}
+
+.logo img {
+    height: 100px;
+    margin-right: 10px;
+    transition: transform 0.3s ease; 
+}
+
+
+.logo:hover img {
+    transform: scale(1.1); 
+}
+
+nav a {
+    font-weight: 600;
+    padding-right: 10px;
+    transition: transform 0.3s ease, color 0.3s ease; 
+}
+
+nav a:hover {
+    color: rgb(26, 145, 175);
+    transform: scale(1.1); 
+}
+
+/* para el header */
+@media (max-width: 700px) {
+    header {
+        flex-direction: column;
+    }
+
+    nav {
+        padding: 10px 0px;
+    }
+
+    .logo img {
+        height: 80px;
+    }
+
+    nav a {
+        padding: 5px 0;
+    }
+}
+
+/* main */
+.titulo {
+    text-align: center;
+    font-size: 2rem;
+    margin: 20px 0;
+    color: rgb(0, 0, 0);
+}
+
+.banner {
+    background-image: url('../Image/inicio1.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    padding: 80px 20px; 
+    text-align: center;
+    color: rgb(0, 0, 0);
+    position: relative;
+}
+
+.banner h1 {
+    margin-bottom: 20px;
+    font-size: 2.5em;
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.7);
+}
+
+.parte1, .parte2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 40vh;
+    padding: 20px; 
+    flex-wrap: wrap; 
+}
+
+.imagen1, .imagen2 {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+}
+
+.imagen1 img, .imagen2 img {
+    max-height: 200px;
+    width: 100%; 
+    object-fit: cover; 
+    padding: 0 10px; 
+}
+
+.parte1 .left {
+    flex-basis: 50%;
+    padding-right: 10px;
+}
+
+.parte1 .right {
+    flex-basis: 50%;
+}
+
+.caja2 {
+    flex-basis: 33%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px; 
+}
+
+
+.caja2 p {
+    font-size: 1.2rem;  
+    line-height: 1.6;    
+    padding: 10px;
+    text-align: center;
+}
+
+
+.parte1 .left p {
+    font-size: 1.2rem;  
+    line-height: 1.6;    
+    padding: 10px;
+    text-align: justify;  
+}
+
+/* footer */
+footer {
+    min-height: 15vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1%;
+    background-color: rgba(0, 0, 0, 0.5);
+    text-align: center;
+    color: aliceblue;
+    padding: 20px 20px; 
+}
+
+footer .contenedor1, .contenedor2 {
+    flex-basis: 100%;
+}
+
+footer .contenedor1 img {
+    width: 40px;
+    margin: 10px;
+}
+
+footer .contenedor1 img:hover {
+    transform: scale(1.1);
+}
+
+/* para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .titulo {
+        font-size: 1.5rem;
+    }
+
+    .banner h1 {
+        font-size: 2rem;
+    }
+
+    .parte1, .parte2 {
+        flex-direction: column;
+    }
+
+    .imagen1 img, .imagen2 img {
+        max-height: 150px;
+    }
+
+    .caja2 {
+        flex-basis: 100%;
+        padding: 20px;
+    }
+
+    .caja2 p {
+        font-size: 1.1rem; 
+    }
+
+    .parte1 .left p {
+        font-size: 1.1rem; 
+    }
+}
+
+@media (max-width: 500px) {
+    .titulo {
+        font-size: 1.2rem;
+    }
+
+    .banner h1 {
+        font-size: 1.5rem;
+    }
+
+    .logo img {
+        height: 60px;
+    }
+
+    nav a {
+        font-size: 0.9rem;
+    }
+
+    .imagen1 img, .imagen2 img {
+        max-height: 120px;
+    }
+
+    .caja2 p {
+        font-size: 1rem;  
+    }
+
+    .parte1 .left p {
+        font-size: 1rem; 
+    }
+}
